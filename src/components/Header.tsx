@@ -16,11 +16,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
-            <span className="text-foreground font-bold text-lg">V</span>
-          </div>
-          <span className="text-xl font-bold text-foreground">Voral</span>
+        <div className="flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/0f6c9c98-f8ac-4e89-979f-38956dfcebe7.png" 
+            alt="Voral Logo" 
+            className="w-8 h-8"
+          />
+          <span className="text-xl font-bold text-foreground font-inter">Voral</span>
         </div>
 
         {/* Desktop Navigation */}

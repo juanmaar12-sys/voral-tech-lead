@@ -66,13 +66,31 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call - In production, replace with actual endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      toast({
-        title: "¡Mensaje enviado!",
-        description: "Nos pondremos en contacto contigo pronto.",
+      // Send form data to n8n webhook
+      const response = await fetch("https://juanmar12.app.n8n.cloud/webhook-test/afd8db19-eacc-4239-8a8a-83216e0ebd68", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          service: formData.service,
+          message: formData.message,
+          timestamp: new Date().toISOString(),
+          source: "voral-website"
+        }),
       });
+
+      if (response.ok) {
+        toast({
+          title: "¡Mensaje enviado!",
+          description: "Nos pondremos en contacto contigo pronto.",
+        });
+      } else {
+        throw new Error("Error en el servidor");
+      }
 
       // Reset form
       setFormData({

@@ -51,7 +51,7 @@ export const ChatbotWidget = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://juanmar12.app.n8n.cloud/webhook-test/617dafa6-bed4-4f1c-956c-bba96901bbef', {
+      const response = await fetch('https://juanmar12.app.n8n.cloud/webhook/617dafa6-bed4-4f1c-956c-bba96901bbef', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import { ChatbotWidget } from "@/components/ChatbotWidget";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <ServicesSection />
       <ContactForm />
       <Footer />
+      <ChatbotWidget />
     </div>
   );
 };
